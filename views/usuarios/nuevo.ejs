@@ -1,0 +1,32 @@
+<%- include("../templates/encabezado") %>
+<%- include("../templates/menu") %>
+<div class="body">
+    <div class="contenedor">
+        <form action="/nuevousuario" method="post" class="contenedor" enctype="multipart/form-data">
+            <div class="nombre_proyecto"><h1>PECKERHEALTH</h1></div>
+            <div class="caja_texto">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" autofocus>
+                <span mensajeNombre></span>
+            </div>
+            <div class="caja_texto">
+                <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+                <span mensajeUsuario></span>
+            </div>
+            <div class="caja_texto">
+                <input type="email" name="correo" id="correo" placeholder="Correo">
+                <span mensajeNombre></span>
+            </div>
+            <div class="caja_texto">
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto">
+                <input class="form-control mb-3" type="file" name="foto" id="foto">
+            </div>
+            <div class="boton_registrarse">
+                <button type="submit">Registrarse</button>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include("../templates/pie") %>

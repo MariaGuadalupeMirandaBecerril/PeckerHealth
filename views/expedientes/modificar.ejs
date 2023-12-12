@@ -1,0 +1,124 @@
+<%- include("../templates/encabezado") %>
+<%- include("../templates/menu") %>
+<div class="body">
+    <div class="contenedorExpediente">
+        <form action="/editarExpediente" method="post" class="contenedorExpediente">
+            <div class="nombre_proyecto"><h1>EXPEDIENTE</h1></div>
+            <div class="secciones"><h4>Datos Generales</h4></div>
+            <input type="hidden" name="id" id="id" value="<%= medicalFile.id %>">
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.nombre %>" name="nombre" id="nombre" placeholder="Nombre(s)" autofocus required>
+                <span mensajeNombre></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.apellidoPaterno %>" name="apellidoPaterno" id="apellidoPaterno" placeholder="Apellido paterno" required>
+                <span mensajeUsuario></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.apellidoMaterno %>" name="apellidoMaterno" id="apellidoMaterno" placeholder="Apellido materno" required>
+                <span mensajeNombre></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.edad %>" name="edad" id="edad" placeholder="Edad" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.fechaNacimiento %>" name="fechaNacimiento" id="fechaNacimiento" placeholder="Fecha de Nacimiento" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.sexo %>" name="sexo" id="sexo" placeholder="Sexo" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.curp %>" name="curp" id="curp" placeholder="CURP" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.ocupacion %>" name="ocupacion" id="ocupacion" placeholder="Ocupación" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="secciones"><h4>Antecedentes patológicos familiares</h4></div>
+            <div class="caja_texto_expediente">
+                <label for="">Responda Si/No</label>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.cancer %>" name="cancer" id="cancer" placeholder="Cáncer" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.diabetes %>" name="diabetes" id="diabetes" placeholder="Diabetes" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.enfermedadesCorazon %>" name="enfermedadesCorazon" id="enfermedadesCorazon" placeholder="Enfermedades del corazón" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.presionAlta %>" name="presionAlta" id="presionAlta" placeholder="Presión arterial alta" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.enfermedadesRiñones %>" name="enfermedadesRiñones" id="enfermedadesRiñones" placeholder="Enfermedades de los riñones" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.enfermedadesCerebro %>" name="enfermedadesCerebro" id="enfermedadesCerebro" placeholder="Enfermedades cerebrovasculares" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.mentales %>" name="mentales" id="mentales" placeholder="Mentales" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.mentales %>" name="suicidio" id="suicidio" placeholder="Suicidio" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.mentales %>" name="otras" id="otras" placeholder="Otras" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="secciones"><h4>Hábitos alimenticios y deportes</h4></div>
+            <div class="caja_texto_expediente">
+                <label for="">Si su respuesta es "No" en la primera pregunta, en las siguientes dos coloque No igualmente</label>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.deporte %>" name="deporte" id="deporte" placeholder="¿Realiza regularmente alguna actividad física?" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.tipoDeporte %>" name="tipoDeporte" id="tipoDeporte" placeholder="Tipo de ejercicio" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.tiempoEjercicio %>" name="tiempoEjercicio" id="tiempoEjercicio" placeholder="Días y tiempo a la semana" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.tiempoAlimentacion %>" name="tiempoAlimentacion" id="tiempoAlimentacion" placeholder="¿Cuántas veces al día come?" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.alimentacion %>" name="alimentacion" id="alimentacion" placeholder="¿Qué come regularmente?" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="secciones"><h4>Exploración física</h4></div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.estatura %>" name="estatura" id="estatura" placeholder="Estatura(mts)" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.peso %>" name="peso" id="peso" placeholder="Peso(Kg)" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= medicalFile.imc %>" name="imc" id="imc" placeholder="IMC" required>
+                <span mensajePassword></span>
+            </div>
+            <div class="boton_registrarse">
+                <button type="submit">Actualizar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include("../templates/pie") %>

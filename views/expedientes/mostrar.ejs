@@ -1,0 +1,134 @@
+<%- include("../templates/encabezado") %>
+<%- include("../templates/menu") %>
+<div class="body">
+    <div class="contenedorExpediente_mostrar">
+        <form action="/mostrarExpedientes" method="get" class="contenedorExpediente_mostrar">
+            <div class="nombre_proyecto"><h1>EXPEDIENTES</h1></div>
+            <%
+            expedientes.forEach((expediente)=>{
+            %>
+            <div class="secciones"><h4>Datos Generales</h4></div>
+            <div class="caja_expediente_mostrar">
+                <input type="text" class="input_expediente" value="<%= expediente.id %>" disabled>
+                <span mensajeNombre></span>
+            </div>
+            <div class="caja_expediente_mostrar">
+                <input type="text" class="input_expediente" value="<%= expediente.nombre %>" disabled>
+                <span mensajeNombre></span>
+            </div>
+            <div class="caja_expediente_mostrar">
+                <input type="text" class="input_expediente" value="<%= expediente.apellidoPaterno %>" disabled>
+                <span mensajeUsuario></span>
+            </div>
+            <div class="caja_expediente_mostrar">
+                <input type="text" class="input_expediente" value="<%= expediente.apellidoMaterno %>" disabled>
+                <span mensajeNombre></span>
+            </div>
+            <div class="caja_expediente_mostrar">
+                <input type="text" class="input_expediente" value="<%= expediente.edad %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_expediente_mostrar">
+                <input type="text" class="input_expediente" value="<%= expediente.fechaNacimiento %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_expediente_mostrar">
+                <input type="text" class="input_expediente" value="<%= expediente.sexo %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_expediente_mostrar">
+                <input type="text" class="input_expediente" value="<%= expediente.curp %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_expediente_mostrar">
+                <input type="text" class="input_expediente" value="<%= expediente.ocupacion %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="secciones"><h4>Antecedentes patológicos familiares</h4></div>
+            <div class="caja_texto_expediente">
+                <label for="">Responda Si/No</label>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.cancer %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.diabetes %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.enfermedadesCorazon %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.presionAlta %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.enfermedadesRiñones %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.enfermedadesCerebro %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.mentales %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.suicidio %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.otras %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="secciones"><h4>Hábitos alimenticios y deportes</h4></div>
+            <div class="caja_texto_expediente">
+                <label for="">Si su respuesta es "No" en la primera pregunta, en las siguientes dos coloque No igualmente</label>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.deporte %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.tipoDeporte %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.tiempoEjercicio %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.tiempoAlimentacion %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.alimentacion %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="secciones"><h4>Exploración física</h4></div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.estatura %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.peso %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="caja_texto_expediente">
+                <input type="text" class="input_expediente" value="<%= expediente.imc %>" disabled>
+                <span mensajePassword></span>
+            </div>
+            <div class="boton_editar">
+                <button class="button_editar" type="submit"><a class="a_editar" href="/editarExpediente/<%= expediente.id %>">Editar</a></button>
+                <button class="button_editar" type="submit"><a class="a_editar" href="/borrarExpediente/<%= expediente.id %>">Borrar</a></button>
+            </div>
+            <%
+            });
+            %>
+        </form>
+    </div>
+</div>
+<%- include("../templates/pie") %>
